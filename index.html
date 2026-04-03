@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>四方世界 ZOD</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+SC:wght@400;700;900&family=Georgia&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg-color: #121016;
+      }
+      body {
+        margin: 0;
+        background-color: var(--bg-color);
+        padding: 0;
+        overflow: hidden;
+        font-family: 'Noto Serif SC', 'Georgia', serif;
+      }
+      #initial-loader {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999;
+        transition:
+          opacity 0.8s ease-in-out,
+          visibility 0.8s;
+        background-color: var(--bg-color);
+        width: 100vw;
+        height: 100vh;
+      }
+      .loader-text {
+        animation: pulse 2s infinite alternate;
+        color: var(--brass-gold);
+        font-weight: 700;
+        font-size: 1.2rem;
+        font-family: 'Cinzel', 'Noto Serif SC', serif;
+        letter-spacing: 6px;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(0.95);
+          opacity: 0.3;
+          text-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
+        }
+        100% {
+          transform: scale(1.05);
+          opacity: 1;
+          text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="initial-loader">
+      <div class="loader-text">UNROLLING FATE...</div>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

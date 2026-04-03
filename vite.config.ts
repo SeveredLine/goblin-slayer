@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [vue()],
-    base: '/Goblin-Slayer/',
+    base: '/goblin-slayer/',
 
     css: {
       postcss: {
